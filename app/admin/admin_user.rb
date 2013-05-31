@@ -1,20 +1,34 @@
-ActiveAdmin.register AdminUser do     
-  index do                            
-    column :email                     
-    column :current_sign_in_at        
-    column :last_sign_in_at           
-    column :sign_in_count             
-    default_actions                   
-  end                                 
+ActiveAdmin.register AdminUser do
+  config.comments = false
 
-  filter :email                       
+  filter :email
 
-  form do |f|                         
-    f.inputs "Admin Details" do       
-      f.input :email                  
-      f.input :password               
-      f.input :password_confirmation  
-    end                               
-    f.actions                         
-  end                                 
-end                                   
+  index do
+    column :id
+    column :email
+    column :created_at
+    default_actions
+  end
+
+  show do
+    attributes_table do
+      row :id
+      row :email
+      row :created_at
+      row :updated_at
+    end
+  end
+
+  form do |f|
+    f.inputs t("activerecord.models.admin_user") do
+      if f.object.new_record?
+        f.input :email
+        f.input :password
+        f.input :password_confirmation
+      else
+        f.input :email
+      end
+    end
+    f.actions
+  end
+end
