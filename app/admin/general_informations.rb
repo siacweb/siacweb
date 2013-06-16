@@ -19,6 +19,7 @@ ActiveAdmin.register GeneralInformation do
       row :main_image do |record|
         image_tag(record.main_image.url(:thumb))
       end
+      rows :address, :phone
     end
   end
 
@@ -27,6 +28,8 @@ ActiveAdmin.register GeneralInformation do
       f.input :name
       f.input :description
       f.input :main_image
+      f.input :address, :as => :text, :input_html => {:rows => 4}
+      f.input :phone
     end
     f.actions
   end

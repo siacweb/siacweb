@@ -1,5 +1,5 @@
 class GeneralInformation < ActiveRecord::Base
-  attr_accessible :name, :description, :main_image
+  attr_accessible :name, :description, :main_image, :address, :phone
 
   has_attached_file :main_image,
                     :styles => {:large => "750x540#", :thumb => "100x100#"},
