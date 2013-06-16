@@ -46,3 +46,12 @@ end
 
 # To use debugger
 # gem 'debugger'
+
+group :deploy do
+  gem 'capistrano'
+  gem 'rvm-capistrano'
+end
+
+group :production do
+  gem 'unicorn'
+end
