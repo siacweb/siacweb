@@ -1,0 +1,19 @@
+<% @general_informations.each do |information| %>
+
+    <header>
+      <h1><%= information.name %></h1>
+    </header>
+
+    <section>
+      <%= image_tag information.main_image.url(:home) %>
+
+      <h2><%= information.address %></h2>
+
+      <h3><%= information.phone %></h3>
+    </section>
+
+    <footer>
+      Copyright 2013-2013 - <%= mail_to "siac.bar.web@gmail.com", "SIAC" %> - Todos os direitos reservados
+    </footer>
+
+<% end %>
