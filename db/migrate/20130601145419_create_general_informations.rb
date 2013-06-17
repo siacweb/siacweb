@@ -7,6 +7,17 @@ class CreateGeneralInformations < ActiveRecord::Migration
       t.integer :main_image_file_size
       t.datetime :main_image_updated_at
       t.string :description
+
+      #Endereço    #TODO colokr campos certos com nomes certos
+      t.string :street, :null => false
+      t.integer :number, :null => false
+      t.string :complement, :null => false
+      t.string :province, :null => false
+      t.string :city, :null => false
+      t.string :state, :null => false
+      t.string :country, :null => false
+      t.string :cep
+
       t.timestamps
     end
   end
