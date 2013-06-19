@@ -1,4 +1,4 @@
-header h1 {
+section h1 {
   text-align: center;
 }
 section img {
@@ -7,10 +7,13 @@ section img {
   margin-right: auto;
   float: left;
 }
-section h2 {
-  padding: 0 105px 15px 440px;
-}
 section h3 {
+  padding: 18px 105px 0 440px;
+}
+section h4 {
+  padding: 0 105px 0 440px;
+}
+section h5 {
   padding: 0 105px 0 440px;
 }
 footer {

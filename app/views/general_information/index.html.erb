@@ -1,22 +1,16 @@
 <% @general_informations.each do |information| %>
 
-    <header>
-      <h1><%= information.name %></h1>
-    </header>
-
     <section>
+      <h1><%= information.name %></h1>
+
       <%= image_tag information.main_image.url(:home) %>
 
-      <h2> Endereço: <%= information.street %>, <%= information.number %></h2>
-      <h2> Complemento: <%= information.complement %></h2>
-      <h2> Bairro: <%= information.province %>, CEP: <%= information.cep %></h2>
-      <h2> Cidade: <%= information.city %> - Estado: <%= information.state %> - País: <%= information.country_bar %></h2>
+      <h3> <%= information.street %>, <%= information.number %> - <%= information.province %> </h3>
+      <h4> <%= information.complement %></h4>
+      <h4> CEP: <%= information.cep %></h4>
+      <h4> <%= information.city %> - <%= information.state %> - <%= information.country_bar %></h4>
 
-      <h3> Telefone: <%= information.phone %></h3>
+      <h5> Telefone: <%= information.phone %></h5>
     </section>
-
-    <footer>
-      Copyright 2013-2013 - <%= mail_to "siac.bar.web@gmail.com", "SIAC" %> - Todos os direitos reservados
-    </footer>
 
 <% end %>
