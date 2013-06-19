@@ -1,0 +1,43 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+.home {
+  height: auto !important;
+  min-height: 96.7%;
+  padding-bottom: 22px;
+}
+.home h1 {
+  text-align: center;
+  height: 35px;
+  background-color: pink;
+}
+.home hr {
+  size: 2px;
+  clear: both;
+}
+.home .main {
+  margin: 30px 0 0 50px;
+}
+.home .gallery {
+  float: left;
+  padding: 10px;
+  left: 442px;
+  position: relative;
+  padding-right: 0;
+}
+.home .home-destaques {
+  float: left;
+  padding: 10px;
+}
+.home .h4 {
+  padding-left: 400px;
+}

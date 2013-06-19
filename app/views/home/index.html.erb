@@ -1,0 +1,31 @@
+<% @homes.each do |home| %>
+
+    <section class="home">
+      <h1><%= home.title %></h1>
+
+      <hr/>
+
+      <%= image_tag home.main_image.url(:medium), :class => "main" %>
+
+      <hr/>
+
+      <%= image_tag home.gallery_image.url(:thumb), :class => "gallery" %>
+      <!--<h4>Fotos</h4>-->
+
+      <%= image_tag home.events_image.url(:thumb), :class => "gallery" %>
+      <!--<h4 class="events">Eventos</h4>-->
+
+      <hr/>
+
+      <h4>Bares em Destaques</h4>
+      <% @general_informations.each do |destaque| %>
+
+          <%= image_tag destaque.main_image.url(:thumb), :class => "home-destaques" %>
+
+      <% end %>
+
+      <hr/>
+
+    </section>
+
+<% end %>

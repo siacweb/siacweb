@@ -1,0 +1,26 @@
+class CreateHomes < ActiveRecord::Migration
+  def up
+    create_table :homes do |t|
+      t.string :title
+      t.string :main_image_file_name
+      t.string :main_image_content_type
+      t.integer :main_image_file_size
+      t.datetime :main_image_updated_at
+
+      t.string :gallery_image_file_name
+      t.string :gallery_image_content_type
+      t.integer :gallery_image_file_size
+      t.datetime :gallery_image_updated_at
+
+      t.string :events_image_file_name
+      t.string :events_image_content_type
+      t.integer :events_image_file_size
+      t.datetime :events_image_updated_at
+
+      t.timestamps
+    end
+  end
+  def down
+    drop_table :homes
+  end
+end

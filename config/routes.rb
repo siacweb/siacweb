@@ -60,4 +60,6 @@ Siacweb::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   get "general_informations" => "general_information#index", :as => :general_informations
+
+  get "homes" => "home#index", :as => :homes
 end
