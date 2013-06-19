@@ -19,7 +19,10 @@ ActiveAdmin.register GeneralInformation do
       row :main_image do |record|
         image_tag(record.main_image.url(:thumb))
       end
-      rows :address, :phone
+      row :phone
+
+      rows :street, :number, :complement, :cep
+      rows :province, :city, :state, :country_bar
     end
   end
 
@@ -28,8 +31,17 @@ ActiveAdmin.register GeneralInformation do
       f.input :name
       f.input :description
       f.input :main_image
-      f.input :address, :as => :text, :input_html => {:rows => 4}
       f.input :phone
+
+      #Endereço - TODO: colocar em parte separada - novo titulo
+      f.input :street
+      f.input :number
+      f.input :complement
+      f.input :cep
+      f.input :province
+      f.input :city
+      f.input :state
+      f.input :country_bar
     end
     f.actions
   end

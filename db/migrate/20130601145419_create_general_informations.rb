@@ -15,7 +15,7 @@ class CreateGeneralInformations < ActiveRecord::Migration
       t.string :province, :null => false
       t.string :city, :null => false
       t.string :state, :null => false
-      t.string :country, :null => false
+      t.string :country_bar, :null => false
       t.string :cep
 
       t.timestamps
