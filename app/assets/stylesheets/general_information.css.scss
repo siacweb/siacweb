@@ -2,3 +2,41 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+#general-information {
+  height: auto !important;
+  min-height: 96.7%;
+  padding-bottom: 22px;
+}
+#general-information h1 {
+  text-align: center;
+  height: 35px;
+}
+#general-information img {
+  margin: 30px 0 0 50px;
+}
+#general-information h3 {
+  padding: 0 494px 0 50px;
+}
+#general-information h4 {
+  padding: 0 494px 0 50px;
+}
+#general-information h5 {
+  padding: 0 494px 0 50px;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  margin-top: -22px;
+  height: 22px;
+  background-color: pink;
+  width: 100%;
+  clear: both;
+}
