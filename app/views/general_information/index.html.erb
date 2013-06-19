@@ -7,9 +7,12 @@
     <section>
       <%= image_tag information.main_image.url(:home) %>
 
-      <h2><%= information.address %></h2>
+      <h2> Endereço: <%= information.street %>, <%= information.number %></h2>
+      <h2> Complemento: <%= information.complement %></h2>
+      <h2> Bairro: <%= information.province %>, CEP: <%= information.cep %></h2>
+      <h2> Cidade: <%= information.city %> - Estado: <%= information.state %> - País: <%= information.country_bar %></h2>
 
-      <h3><%= information.phone %></h3>
+      <h3> Telefone: <%= information.phone %></h3>
     </section>
 
     <footer>
