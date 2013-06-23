@@ -5,6 +5,8 @@
 
       <hr/>
 
+      <%= render :partial => 'layouts/social', :locals => {:url => homes_path, :share_text => "Um site sobre todos os bares de Uberlândia! Que legal!"} %>
+
       <%= image_tag home.main_image.url(:medium), :class => "main" %>
 
       <hr/>
@@ -22,12 +24,16 @@
       <hr/>
 
       <h4>Bares em Destaque</h4>
-      <% @general_informations.each do |destaque| %>
+      <% @general_informations.each_with_index do |destaque, index| %>
 
-          <div class="home-destaques">
-            <%= image_tag destaque.main_image.url(:thumb) %>
-            <h5><%= destaque.name %></h5>
-          </div>
+          <% if index <= 7 %>
+              <div class="home-destaques">
+                <%= image_tag destaque.main_image.url(:thumb) %>
+                <h5><%= destaque.name %></h5>
+              </div>
+          <% else %>
+              <% break %>
+          <% end %>
 
       <% end %>
 
