@@ -9,18 +9,25 @@
 
       <hr/>
 
-      <%= image_tag home.gallery_image.url(:thumb), :class => "gallery" %>
-      <!--<h4>Fotos</h4>-->
+      <div class="gallery" style="padding-left:460px">
+        <%= image_tag home.gallery_image.url(:thumb)%>
+        <h4>Fotos</h4>
+      </div>
 
-      <%= image_tag home.events_image.url(:thumb), :class => "gallery" %>
-      <!--<h4 class="events">Eventos</h4>-->
+      <div class="gallery">
+        <%= image_tag home.events_image.url(:thumb)%>
+        <h4>Eventos</h4>
+      </div>
 
       <hr/>
 
-      <h4>Bares em Destaques</h4>
+      <h4>Bares em Destaque</h4>
       <% @general_informations.each do |destaque| %>
 
-          <%= image_tag destaque.main_image.url(:thumb), :class => "home-destaques" %>
+          <div class="home-destaques">
+            <%= image_tag destaque.main_image.url(:thumb) %>
+            <h5><%= destaque.name %></h5>
+          </div>
 
       <% end %>
 

@@ -21,7 +21,7 @@ body {
   background-color: pink;
 }
 .home hr {
-  size: 2px;
+  height: 2px;
   clear: both;
 }
 .home .main {
@@ -30,14 +30,8 @@ body {
 .home .gallery {
   float: left;
   padding: 10px;
-  left: 442px;
-  position: relative;
-  padding-right: 0;
 }
 .home .home-destaques {
   float: left;
   padding: 10px;
-}
-.home .h4 {
-  padding-left: 400px;
 }
