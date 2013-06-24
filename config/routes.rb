@@ -1,6 +1,6 @@
 Siacweb::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -59,7 +59,12 @@ Siacweb::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 
-  get "general_informations" => "general_information#index", :as => :general_informations
+  #root :to => "home#index"
 
-  get "homes" => "home#index", :as => :homes
+  get "" => "home#index", :as => :home
+
+  get ":name" => "general_information#index", :as => :general_information
+
+  ActiveAdmin.routes(self)
+
 end
