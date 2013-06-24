@@ -5,20 +5,31 @@
 
       <hr/>
 
-      <%= render :partial => 'layouts/social', :locals => {:url => homes_path, :share_text => "Um site sobre todos os bares de Uberlândia! Que legal!"} %>
+      <%= render :partial => 'layouts/social', :locals => {:url => home_path, :share_text => "Um site sobre todos os bares de Uberlândia! Que legal!"} %>
 
       <%= image_tag home.main_image.url(:medium), :class => "main" %>
 
       <hr/>
 
-      <div class="gallery" style="padding-left:460px">
+      <div class="home-links" style="padding-left:460px">
         <%= image_tag home.gallery_image.url(:thumb)%>
         <h4>Fotos</h4>
       </div>
 
-      <div class="gallery">
+      <div class="home-links">
         <%= image_tag home.events_image.url(:thumb)%>
         <h4>Eventos</h4>
+      </div>
+
+      <div class="home-links">
+        <%= image_tag home.contact_image.url(:thumb)%>
+        <h4>Contato</h4>
+      </div>
+
+      <div>
+        <%= image_tag home.follow_fb_image.url(:thumb), :class=>"home-links" %>
+        <%= image_tag home.follow_tw_image.url(:thumb), :class=>"home-links", :style => "padding-top:0; padding-bottom:0;" %>
+        <h4 class="home-links" style="padding-top:5px">Siga-nos!</h4>
       </div>
 
       <hr/>
