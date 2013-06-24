@@ -15,6 +15,7 @@ ActiveAdmin.register GeneralInformation do
   show do
     attributes_table do
       row :id
+      row :name
       row :description
       row :main_image do |record|
         image_tag(record.main_image.url(:thumb))
